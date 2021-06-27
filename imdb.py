@@ -1,12 +1,8 @@
-# Ultroid Userbot
-
-# Ported from @UserbotPlugins
-# originally from jeepbot for uniborg
 
 """
 Search movie details from IMDB
 
-✘ Commands Available
+💐 Commands Available
 • `{i}imdb <keyword>`
 """
 
@@ -20,7 +16,7 @@ from . import *
 langi = "en"
 
 
-@ultroid_cmd(pattern="imdb ?(.*)")
+@ilhammansiz_cmd(pattern="imdb ?(.*)")
 async def imdb(e):
     await eor(e, "`...`")
     movie_name = e.pattern_match.group(1)
