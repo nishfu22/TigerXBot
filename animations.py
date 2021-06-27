@@ -1,12 +1,10 @@
-# Ultroid Userbot
-# 2020 Copyright (c)
 
 # Animation Plugin
 
 """
   Animation Plugin
 
-✘ Commands Available
+💐 Commands Available
 
 • `{i}kill`
 • `{i}fp`
@@ -18,7 +16,7 @@ import asyncio
 from . import HELP
 
 
-@ultroid_cmd(pattern="kill$")
+@ilhammansiz_cmd(pattern="kill$")
 async def _(event):
     animation_interval = 0.7
     animation_ttl = range(0, 12)
@@ -43,6 +41,6 @@ async def _(event):
         await a.edit(animation_chars[i % 12])
 
 
-@ultroid_cmd(pattern="fp$")
+@ilhammansiz_cmd(pattern="fp$")
 async def a(e):
     await eor(e, "🤦‍♂")
