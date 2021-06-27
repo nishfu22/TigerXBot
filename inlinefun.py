@@ -1,15 +1,9 @@
-#
-# Ultroid - UserBot
-#
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
-# .tweet made for ultroid
+
 
 # .uta ported from Dark-Cobra
 
 """
-✘ Commands Available -
+💐 Commands Available -
 
 • `{i}uta <search query>`
     Inline song search and downloader.
@@ -33,7 +27,7 @@ from telethon.errors import (ChatSendInlineForbiddenError,
 from . import *
 
 
-@ultroid_cmd(pattern="tweet ?(.*)")
+@ilhammansiz_cmd(pattern="tweet ?(.*)")
 async def tweet(e):
     wai = await eor(e, "`Processing...`")
     text = e.pattern_match.group(1)
@@ -53,7 +47,7 @@ async def tweet(e):
         await wai.edit("Sorry boss, I can't send Sticker Here !!")
 
 
-@ultroid_cmd(pattern="stic ?(.*)")
+@ilhammansiz_cmd(pattern="stic ?(.*)")
 async def tweet(e):
     if len(e.text) > 5 and e.text[5] != " ":
         return
@@ -62,7 +56,7 @@ async def tweet(e):
     if text is None:
         return await wai.edit("`Give me Some Emoji !`")
     try:
-        results = await ultroid_bot.inline_query("sticker", text)
+        results = await petercordpanda_bot.inline_query("sticker", text)
         num = random.randrange(0, len(results) -1)
         await results[num].click(
             e.chat_id,
@@ -76,7 +70,7 @@ async def tweet(e):
         await wai.edit("Sorry boss, I can't send Sticker Here !!")
 
 
-@ultroid_cmd(pattern="frog ?(.*)")
+@ilhammansiz_cmd(pattern="frog ?(.*)")
 async def honkasays(e):
     wai = await eor(e, "`Processing...`")
     text = e.pattern_match.group(1)
@@ -86,21 +80,21 @@ async def honkasays(e):
         if not text.endswith("."):
             text = text + "."
         if len(text) <= 9:
-            results = await ultroid_bot.inline_query("honka_says_bot", text)
+            results = await petercordpanda_bot.inline_query("honka_says_bot", text)
             await results[2].click(
                 e.chat_id,
                 silent=True,
                 hide_via=True,
             )
         elif len(text) >= 14:
-            results = await ultroid_bot.inline_query("honka_says_bot", text)
+            results = await petercordpanda_bot.inline_query("honka_says_bot", text)
             await results[0].click(
                 e.chat_id,
                 silent=True,
                 hide_via=True,
             )
         else:
-            results = await ultroid_bot.inline_query("honka_says_bot", text)
+            results = await petercordpanda_bot.inline_query("honka_says_bot", text)
             await results[1].click(
                 e.chat_id,
                 silent=True,
@@ -113,7 +107,7 @@ async def honkasays(e):
         await wai.edit("Sorry boss, I can't send Sticker Here !!")
 
 
-@ultroid_cmd(pattern="uta ?(.*)")
+@ilhammansiz_cmd(pattern="uta ?(.*)")
 async def nope(doit):
     ok = doit.pattern_match.group(1)
     a = await eor(doit, "`Processing...`")
@@ -125,7 +119,7 @@ async def nope(doit):
                 doit,
                 "`Sir please give some query to search and download it for you..!`",
             )
-    sticcers = await ultroid_bot.inline_query("Lybot", f"{(deEmojify(ok))}")
+    sticcers = await petercordpanda_bot.inline_query("Lybot", f"{(deEmojify(ok))}")
     try:
         await sticcers[0].click(
             doit.chat_id,
