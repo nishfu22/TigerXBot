@@ -1,14 +1,6 @@
-# (c) Shrimadhav U.K
-# aka Spechide
-#
-# Ported for Ultroid - UserBot
-#
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 """
-✘ Commands Available -
+💐 Commands Available -
 
 • `{i}type <msg>`
     Edits the Message and shows like someone is typing.
@@ -19,7 +11,7 @@ import asyncio
 from . import *
 
 
-@ultroid_cmd(pattern="type ?(.*)")
+@ilhammansiz_cmd(pattern="type ?(.*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     if not input_str:
