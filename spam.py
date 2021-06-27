@@ -1,12 +1,6 @@
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
-#
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 """
-✘ Commands Available -
+💐 Commands Available -
 • `{i}spam <no of msgs> <your msg>`
     spams chat, the current limit for this is from 1 to 99.
 
@@ -27,7 +21,7 @@ import os
 from . import *
 
 
-@ultroid_cmd(pattern="tspam")
+@ilhammansiz_cmd(pattern="tspam")
 async def tmeme(e):
     tspam = str(e.text[7:])
     message = tspam.replace(" ", "")
@@ -36,7 +30,7 @@ async def tmeme(e):
     await e.delete()
 
 
-@ultroid_cmd(pattern="spam")
+@ilhammansiz_cmd(pattern="spam")
 async def spammer(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         message = e.text
@@ -46,7 +40,7 @@ async def spammer(e):
         await e.delete()
 
 
-@ultroid_cmd(pattern="bigspam")
+@ilhammansiz_cmd(pattern="bigspam")
 async def bigspam(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         message = e.text
@@ -57,7 +51,7 @@ async def bigspam(e):
         await e.delete()
 
 
-@ultroid_cmd(pattern="picspam")
+@ilhammansiz_cmd(pattern="picspam")
 async def tiny_pic_spam(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         reply = await e.get_reply_message()
@@ -71,7 +65,7 @@ async def tiny_pic_spam(e):
         await e.delete()
 
 
-@ultroid_cmd(pattern="delayspam ?(.*)")
+@ilhammansiz_cmd(pattern="delayspam ?(.*)")
 async def delayspammer(e):
     try:
         args = e.text.split(" ", 3)
