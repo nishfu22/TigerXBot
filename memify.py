@@ -1,15 +1,6 @@
-# Ported Nd Modified For Ultroid
-# Ported From DarkCobra (Modified by @ProgrammingError)
-#
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
-#
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 """
-✘ Commands Available -
+💐 Commands Available -
 
 • `{i}mmf <upper text> ; <lower text> <reply to media>`
     To create memes as sticker,
@@ -31,7 +22,7 @@ from PIL import Image, ImageDraw, ImageFont
 from . import *
 
 
-@ultroid_cmd(pattern="mmf ?(.*)")
+@ilhammansiz_cmd(pattern="mmf ?(.*)")
 async def ultd(event):
     ureply = await event.get_reply_message()
     msg = event.pattern_match.group(1)
@@ -183,7 +174,7 @@ async def draw_meme_text(image_path, msg):
     return imag
 
 
-@ultroid_cmd(pattern="mms ?(.*)")
+@ilhammansiz_cmd(pattern="mms ?(.*)")
 async def mms(event):
     ureply = await event.get_reply_message()
     msg = event.pattern_match.group(1)
