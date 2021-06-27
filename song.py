@@ -1,17 +1,7 @@
-#    Ultroid - UserBot
-#    Copyright 2020 (c)
-
-# For song and vsong
-#    Thanks to @AvinashReddy for the ytdl base and @xditya
-# Lyrics ported from Dark Cobra
-#
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 
 """
-✘ Commands Available -
+💐 Commands Available -
 • `{i}song <search query>`
     upload song as mp3.
 
@@ -47,7 +37,7 @@ from youtubesearchpython import SearchVideos
 from . import *
 
 
-@ultroid_cmd(pattern="song ?(.*)")
+@ilhammansiz_cmd(pattern="song ?(.*)")
 async def download_video(ult):
     a = ult.text
     if len(a) <= 5 and a[5] == "s":
@@ -154,7 +144,7 @@ async def download_video(ult):
         pass
 
 
-@ultroid_cmd(pattern="vsong (.*)")
+@ilhammansiz_cmd(pattern="vsong (.*)")
 async def download_vsong(ult):
     x = await eor(ult, "Processing..")
     url = ult.pattern_match.group(1)
@@ -229,7 +219,7 @@ async def download_vsong(ult):
     await x.delete()
 
 
-@ultroid_cmd(pattern=r"lyrics ?(.*)")
+@ilhammansiz_cmd(pattern=r"lyrics ?(.*)")
 async def original(event):
     if not event.pattern_match.group(1):
         return await eor(event, "give query to search.")
@@ -248,15 +238,15 @@ async def original(event):
     except LyError:
         return await eod(event, "No Results Found")
     a7ul = sh1vm["lyrics"]
-    await ultroid_bot.send_message(event.chat_id, a7ul, reply_to=event.reply_to_msg_id)
+    await petercordpanda_bot.send_message(event.chat_id, a7ul, reply_to=event.reply_to_msg_id)
     await ab.delete()
 
 
-@ultroid_cmd(pattern="songs ?(.*)")
+@ilhammansiz_cmd(pattern="songs ?(.*)")
 async def _(event):
 
     try:
-        await ultroid_bot(ImportChatInviteRequest("DdR2SUvJPBouSW4QlbJU4g"))
+        await petercordpanda_bot(ImportChatInviteRequest("DdR2SUvJPBouSW4QlbJU4g"))
     except UserAlreadyParticipantError:
         pass
     except Exception:
