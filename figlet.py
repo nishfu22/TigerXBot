@@ -1,5 +1,5 @@
 """
-✘ Commands Available
+💐 Commands Available
 
 • `{i}figlet <text>`
     Make a text a figlet.
@@ -462,7 +462,7 @@ CMD_SET = {
 }
 
 
-@ultroid_cmd(pattern="figlet ?(.*)")
+@ilhammansiz_cmd(pattern="figlet ?(.*)")
 async def figlet(event):
     input_str = event.pattern_match.group(1)
     if "|" in input_str:
