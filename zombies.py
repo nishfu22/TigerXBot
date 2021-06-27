@@ -1,11 +1,6 @@
-# Ultroid Userbot
-#
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 
-"""✘ Commands Available
+"""💐 Commands Available
 • `{i}zombies`
     Gives the Number of Deleted Accounts.
 
@@ -50,14 +45,14 @@ UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 # ================================================
 
 
-@ultroid_cmd(pattern="zombies ?(.*)")
+@ilhammansiz_cmd(pattern="zombies ?(.*)")
 async def rm_deletedacc(show):
     con = show.pattern_match.group(1).lower()
     del_u = 0
     del_status = "`No deleted accounts found, Group is clean`"
     if con != "clean":
         eh = await eor(show, "`Searching for ghost/deleted/zombie accounts...`")
-        async for user in ultroid_bot.iter_participants(show.chat_id):
+        async for user in petercordpanda_bot.iter_participants(show.chat_id):
             if user.deleted:
                 del_u += 1
         if del_u > 0:
@@ -75,10 +70,10 @@ async def rm_deletedacc(show):
     ehh = await eor(show, "`Deleting deleted accounts...`")
     del_u = 0
     del_a = 0
-    async for user in ultroid_bot.iter_participants(show.chat_id):
+    async for user in petercordpanda_bot.iter_participants(show.chat_id):
         if user.deleted:
             try:
-                await ultroid_bot(
+                await petercordpanda_bot(
                     EditBannedRequest(show.chat_id, user.id, BANNED_RIGHTS)
                 )
             except ChatAdminRequiredError:
@@ -87,10 +82,10 @@ async def rm_deletedacc(show):
             except UserAdminInvalidError:
                 del_u -= 1
     del_a = 0
-    async for user in ultroid_bot.iter_participants(show.chat_id):
+    async for user in petercordpanda_bot.iter_participants(show.chat_id):
         if user.deleted:
             try:
-                await ultroid_bot(
+                await petercordpanda_bot(
                     EditBannedRequest(show.chat_id, user.id, BANNED_RIGHTS)
                 )
             except ChatAdminRequiredError:
@@ -99,7 +94,7 @@ async def rm_deletedacc(show):
             except UserAdminInvalidError:
                 del_u -= 1
                 del_a += 1
-            await ultroid_bot(EditBannedRequest(show.chat_id, user.id, UNBAN_RIGHTS))
+            await petercordpanda_bot(EditBannedRequest(show.chat_id, user.id, UNBAN_RIGHTS))
             del_u += 1
     if del_u > 0:
         del_status = f"Cleaned **{del_u}** deleted account(s)"
