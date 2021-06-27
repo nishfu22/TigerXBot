@@ -1,13 +1,7 @@
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
-#
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 
 """
-✘ Commands Available
+💐 Commands Available
 
 • `{i}icon <query>`
     Icon search from flaticon.com and uploading as sticker.
@@ -24,7 +18,7 @@ from bs4 import BeautifulSoup as bs
 from . import *
 
 
-@ultroid_cmd(pattern="icon ?(.*)")
+@ilhammansiz_cmd(pattern="icon ?(.*)")
 async def www(e):
     a = e.pattern_match.group(1)
     if not a:
@@ -40,7 +34,7 @@ async def www(e):
         )
         dome = results[random.randrange(0, len(results) - 1)]["data-src"]
         urllib.request.urlretrieve(dome, "sticker.webp")
-        await ultroid_bot.send_file(e.chat.id, "sticker.webp")
+        await petercordpanda_bot.send_file(e.chat.id, "sticker.webp")
         os.remove("sticker.webp")
         await tt.delete()
     except Exception:
