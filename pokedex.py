@@ -7,7 +7,7 @@
 # <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 """
-✘ Commands Available -
+💐 Commands Available -
 
 • `{i}pokemon <query>`
     Send details of Pokemon.
@@ -23,7 +23,7 @@ from pokedex import pokedex as badhiya
 from . import *
 
 
-@ultroid_cmd(pattern="pokemon ?(.*)")
+@ilhammansiz_cmd(pattern="pokemon ?(.*)")
 async def pokedex(event):
     pokemon = event.pattern_match.group(1)
     if not pokemon:
@@ -118,11 +118,11 @@ async def pokedex(event):
 **Total**   : `{Stats['total']}`            `(7){move7}`
 **DESCRIPTION** : `{description}`
   """
-    await ultroid_bot.send_file(event.chat_id, lst, caption=cap)
+    await petercordpanda_bot.send_file(event.chat_id, lst, caption=cap)
     await xx.delete()
 
 
-@ultroid_cmd(pattern="pokecard ?(.*)")
+@ilhammansiz_cmd(pattern="pokecard ?(.*)")
 async def pokecard(event):
     pokename = event.pattern_match.group(1)
     if not pokename:
