@@ -1,12 +1,6 @@
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
-#
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 """
-✘ Commands Available
+💐 Commands Available
 
 • `{i}hack`
     Do a Prank With Replied user.
@@ -19,7 +13,7 @@ import random
 from . import *
 
 
-@ultroid_cmd(pattern="hack")
+@ilhammansiz_cmd(pattern="hack")
 async def _(event):
     animation_interval = 0.7
     animation_ttl = range(0, 11)
