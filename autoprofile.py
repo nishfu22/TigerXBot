@@ -1,14 +1,8 @@
-#
-# Ultroid - UserBot
-#
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 # Ported Plugin
 
 """
-✘ Commands Available -
+💐 Commands Available -
 
 • `{i}autoname`
    `Starts AUTONAME`.
@@ -28,7 +22,7 @@ import random
 from telethon.tl.functions.account import UpdateProfileRequest
 
 
-@ultroid_cmd(pattern="(auto|stop)name$")
+@ilhammansiz_cmd(pattern="(auto|stop)name$")
 async def autoname_(event):
     match = event.pattern_match.group(1)
     if match == "stop":
@@ -43,8 +37,8 @@ async def autoname_(event):
             return
         DM = time.strftime("%d-%m-%y")
         HM = time.strftime("%H:%M")
-        name = f"🕒{HM} ⚡{OWNER_NAME}⚡ {DM} 🗓️"
-        await ultroid_bot(
+        name = f"🕒{HM} 💐{OWNER_NAME}💐 {DM} 🗓️"
+        await petercordpanda_bot(
                 UpdateProfileRequest( 
                     first_name=name
                 )
@@ -52,7 +46,7 @@ async def autoname_(event):
         await asyncio.sleep(1000)
 
 
-@ultroid_cmd(pattern="(auto|stop)bio$")
+@ilhammansiz_cmd(pattern="(auto|stop)bio$")
 async def autoname_(event):
     match = event.pattern_match.group(1)
     if match == "stop":
