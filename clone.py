@@ -28,7 +28,7 @@ async def _(event):
     reply_message = await event.get_reply_message()
     whoiam = await petercordpanda_bot(GetFullUserRequest(petercordpanda_bot.uid))
     if whoiam.about:
-        mybio = str(ultroid_bot.me.id) + "01"
+        mybio = str(petercordpanda_bot.me.id) + "01"
         udB.set(f"{mybio}", whoiam.about)  # saving bio for revert
     udB.set(f"{petercordpanda_bot.uid}02", whoiam.user.first_name)
     if whoiam.user.last_name:
@@ -81,9 +81,9 @@ async def _(event):
     await petercordpanda_bot(
         DeletePhotosRequest(await event.client.get_profile_photos("me", limit=n))
     )
-    await ultroid_bot(UpdateProfileRequest(about=bio))
-    await ultroid_bot(UpdateProfileRequest(first_name=name))
-    await ultroid_bot(UpdateProfileRequest(last_name=ok))
+    await petercordpanda_bot(UpdateProfileRequest(about=bio))
+    await petercordpanda_bot(UpdateProfileRequest(first_name=name))
+    await petercordpanda_bot(UpdateProfileRequest(last_name=ok))
     await eor(event, "Succesfully reverted to your account back !")
     udB.delete(f"{petercordpanda_bot.uid}01")
     udB.delete(f"{petercordpanda_bot.uid}02")
