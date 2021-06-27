@@ -1,15 +1,8 @@
-#
-# Ultroid - UserBot
-#
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
-#
-# Ported from Telebot
+
 
 
 """
-✘ Commands Available -
+💐 Commands Available -
 
 • {i}tts LanguageCode <reply to a message>
 • {i}tts LangaugeCode | text to speak
@@ -27,7 +20,7 @@ from gtts import gTTS
 from . import *
 
 
-@ultroid_cmd(
+@ilhammansiz_cmd(
     pattern="tts ?(.*)",
 )
 async def _(event):
@@ -73,7 +66,7 @@ async def _(event):
             required_file_name = required_file_name + ".opus"
         end = datetime.now()
         ms = (end - start).seconds
-        await ultroid_bot.send_file(
+        await petercordpanda_bot.send_file(
             event.chat_id,
             required_file_name,
             reply_to=event.message.reply_to_msg_id,
