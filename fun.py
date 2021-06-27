@@ -1,5 +1,5 @@
 """
-✘ Commands Available
+💐 Commands Available
 
 • `{i}joke`
     To get joke.
@@ -34,12 +34,12 @@ from telethon.errors import ChatSendMediaForbiddenError
 from . import *
 
 
-@ultroid_cmd(pattern="joke$")
+@ilhammansiz_cmd(pattern="joke$")
 async def _(ult):
     await eor(ult, get_joke())
 
 
-@ultroid_cmd(pattern="insult$")
+@ilhammansiz_cmd(pattern="insult$")
 async def gtruth(ult):
     m = await eor(ult, "Generating...")
     nl = "https://fungenerators.com/random/insult/new-age-insult/"
@@ -49,7 +49,7 @@ async def gtruth(ult):
     await m.edit(f"{cm}")
 
 
-@ultroid_cmd(pattern="url ?(.*)")
+@ilhammansiz_cmd(pattern="url ?(.*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     if not input_str:
@@ -68,7 +68,7 @@ async def _(event):
         await eor(event, "`Something went wrong. Please try again Later.`")
 
 
-@ultroid_cmd(pattern="decide$")
+@ilhammansiz_cmd(pattern="decide$")
 async def _(event):
     hm = await eor(event, "`Deciding`")
     message_id = event.message.id
@@ -84,7 +84,7 @@ async def _(event):
         await eor(event, r["answer"])
 
 
-@ultroid_cmd(pattern="xo$")
+@ilhammansiz_cmd(pattern="xo$")
 async def xo(ult):
     xox = await ultroid_bot.inline_query("xobot", "play")
     await xox[random.randrange(0, len(xox) - 1)].click(
@@ -93,7 +93,7 @@ async def xo(ult):
     await ult.delete()
 
 
-@ultroid_cmd(pattern="wordi$")
+@ilhammansiz_cmd(pattern="wordi$")
 async def word(ult):
     game = await ultroid_bot.inline_query("wordibot", "play")
     await game[0].click(
@@ -102,7 +102,7 @@ async def word(ult):
     await ult.delete()
 
 
-@ultroid_cmd(pattern="gps (.*)")
+@ilhammansiz_cmd(pattern="gps (.*)")
 async def map(ult):
     get = ult.pattern_match.group(1)
     if not get:
