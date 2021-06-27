@@ -1,13 +1,7 @@
-# Ported From DarkCobra , Originally By Uniborg
-# Ultroid - UserBot
-#
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 
 """
-✘ Commands Available
+💐 Commands Available
 
 • `{i}clone <reply/username>`
     clone the identity of user.
@@ -28,17 +22,17 @@ from telethon.tl.types import MessageEntityMentionName
 from . import *
 
 
-@ultroid_cmd(pattern="clone ?(.*)")
+@ilhammansiz_cmd(pattern="clone ?(.*)")
 async def _(event):
     eve = await eor(event, "`Processing...`")
     reply_message = await event.get_reply_message()
-    whoiam = await ultroid_bot(GetFullUserRequest(ultroid_bot.uid))
+    whoiam = await petercordpanda_bot(GetFullUserRequest(petercordpanda_bot.uid))
     if whoiam.about:
         mybio = str(ultroid_bot.me.id) + "01"
         udB.set(f"{mybio}", whoiam.about)  # saving bio for revert
-    udB.set(f"{ultroid_bot.uid}02", whoiam.user.first_name)
+    udB.set(f"{petercordpanda_bot.uid}02", whoiam.user.first_name)
     if whoiam.user.last_name:
-        udB.set(f"{ultroid_bot.uid}03", whoiam.user.last_name)
+        udB.set(f"{petercordpanda_bot.uid}03", whoiam.user.last_name)
     replied_user, error_i_a = await get_full_user(event)
     if replied_user is None:
         await eve.edit(str(error_i_a))
@@ -57,43 +51,43 @@ async def _(event):
     user_bio = replied_user.about
     if user_bio is not None:
         user_bio = replied_user.about
-    await ultroid_bot(UpdateProfileRequest(first_name=first_name))
-    await ultroid_bot(UpdateProfileRequest(last_name=last_name))
-    await ultroid_bot(UpdateProfileRequest(about=user_bio))
+    await petercordpanda_bot(UpdateProfileRequest(first_name=first_name))
+    await petercordpanda_bot(UpdateProfileRequest(last_name=last_name))
+    await petercordpanda_bot(UpdateProfileRequest(about=user_bio))
     pfile = await ultroid_bot.upload_file(profile_pic)  # pylint:disable=E060
-    await ultroid_bot(UploadProfilePhotoRequest(pfile))
+    await petercordpanda_bot(UploadProfilePhotoRequest(pfile))
     await eve.delete()
-    await ultroid_bot.send_message(
+    await petercordpanda_bot.send_message(
         event.chat_id, f"**I am `{first_name}` from now...**", reply_to=reply_message
     )
 
 
-@ultroid_cmd(pattern="revert$")
+@ilhammansiz_cmd(pattern="revert$")
 async def _(event):
     name = OWNER_NAME
     ok = ""
-    mybio = str(ultroid_bot.me.id) + "01"
+    mybio = str(petercordpanda_bot.me.id) + "01"
     bio = "Error : Bio Lost"
     chc = udB.get(mybio)
     if chc:
         bio = chc
-    fname = udB.get(f"{ultroid_bot.uid}02")
-    lname = udB.get(f"{ultroid_bot.uid}03")
+    fname = udB.get(f"{petercordpanda_bot.uid}02")
+    lname = udB.get(f"{petercordpanda_bot.uid}03")
     if fname:
         name = fname
     if lname:
         ok = lname
     n = 1
-    await ultroid_bot(
+    await petercordpanda_bot(
         DeletePhotosRequest(await event.client.get_profile_photos("me", limit=n))
     )
     await ultroid_bot(UpdateProfileRequest(about=bio))
     await ultroid_bot(UpdateProfileRequest(first_name=name))
     await ultroid_bot(UpdateProfileRequest(last_name=ok))
     await eor(event, "Succesfully reverted to your account back !")
-    udB.delete(f"{ultroid_bot.uid}01")
-    udB.delete(f"{ultroid_bot.uid}02")
-    udB.delete(f"{ultroid_bot.uid}03")
+    udB.delete(f"{petercordpanda_bot.uid}01")
+    udB.delete(f"{petercordpanda_bot.uid}02")
+    udB.delete(f"{petercordpanda_bot.uid}03")
 
 
 async def get_full_user(event):
