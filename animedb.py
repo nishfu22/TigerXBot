@@ -1,10 +1,8 @@
-# Made by : @Arnab431 || github.com/ArnabXD
-# Made For : https://github.com/TeamUltroid/UltroidAddons
 
 """
 Search animes and manga from anilist.co using @animedb_bot
 
-✘ Commands Available
+💐 Commands Available
 • `{i}manga <keyword>`
     To get manga info
 """
@@ -15,7 +13,7 @@ from . import *
 
 INLOCK = "`Seems like inline messages aren't allowed here`"
 
-@ultroid_cmd(
+@ilhammansiz_cmd(
     pattern="manga ?(.*)",
 )
 async def manga(ult):
