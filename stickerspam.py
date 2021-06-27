@@ -1,12 +1,6 @@
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
-#
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 """
-✘ Commands Available -
+💐 Commands Available -
 
 •`{i}sspam <reply to sticker>`
    it spam the whole stickers in that pack.
@@ -20,7 +14,7 @@ from telethon.tl.types import InputStickerSetID, InputStickerSetShortName
 from . import *
 
 
-@ultroid_cmd(pattern="sspam$")
+@ilhammansiz_cmd(pattern="sspam$")
 async def _(e):
     x = await e.get_reply_message()
     if not (x and x.media and hasattr(x.media, "document")):
