@@ -1,12 +1,6 @@
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
-
 """
-✘ Commands Available -
+💐 Commands Available -
 
 • {i}encode <text/reply to message>
     encode the text
@@ -20,7 +14,7 @@ import base64
 from . import *
 
 
-@ultroid_cmd(pattern="encode ?(.*)")
+@ilhammansiz_cmd(pattern="encode ?(.*)")
 async def encod(e):
     match = e.pattern_match.group(1)
     if not match and e.is_reply:
@@ -35,7 +29,7 @@ async def encod(e):
     await eor(e, f"**=>> Encoded Text :** `{match}`\n\n**=>> OUTPUT :**\n`{atc}`")
 
 
-@ultroid_cmd(pattern="decode ?(.*)")
+@ilhammansiz_cmd(pattern="decode ?(.*)")
 async def encod(e):
     match = e.pattern_match.group(1)
     if not match and e.is_reply:
