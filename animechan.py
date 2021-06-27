@@ -1,6 +1,3 @@
-# Ultroid - UserBot
-#
-# This file is a part of < https://github.com/TeamUltroid/UltroidAddons/>
 
 """
 Fetch Random anime quotes
@@ -13,7 +10,7 @@ import requests
 from . import *
 
 
-@ultroid_cmd(pattern="aniquote")
+@ilhammansiz_cmd(pattern="aniquote")
 async def _(ult):
     u = await eor(ult, "...")
     try:
