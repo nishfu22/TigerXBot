@@ -2,7 +2,7 @@
 # Made by senku
 
 """
-✘ Commands Available
+💐 Commands Available
 
 • `{i}findsong <reply to song>`
    Identify the song name
@@ -13,7 +13,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from . import *
 
 
-@ultroid_cmd(pattern="findsong$")
+@ilhammansiz_cmd(pattern="findsong$")
 async def _(event):
     if not event.reply_to_msg_id:
         return await eor(event, "Reply to an audio message.")
