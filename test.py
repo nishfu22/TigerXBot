@@ -1,13 +1,6 @@
-# Ported From DarkCobra Originally By UNIBORG
-#
-# Ultroid - UserBot
-#
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 """
-✘ Commands Available -
+💐 Commands Available -
 
 • `{i}test`
     Test Ur Heroku Server Speed.
@@ -21,7 +14,7 @@ import speedtest
 from . import *
 
 
-@ultroid_cmd(pattern="test ?(.*)")
+@ilhammansiz_cmd(pattern="test ?(.*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     as_text = True
@@ -55,7 +48,7 @@ async def _(event):
         speedtest_image = response
         if as_text:
             await xx.edit(
-                """`Ultroid Server Speed in {} sec`
+                """`PetercordPanda Server Speed in {} sec`
 
 `Download: {}`
 `Upload: {}`
