@@ -253,20 +253,20 @@ async def _(event):
         return await eor(
             event,
             "You need to join [this]"
-            + "(https://t.me/joinchat/DdR2SUvJPBouSW4QlbJU4g)"
+            + "(https://t.me/TEAMSquadUserbotSupport)"
             + "group for this module to work.",
         )
     args = event.pattern_match.group(1)
     if not args:
         return await eor(event, "`Enter song name`")
     okla = await eor(event, "processing...")
-    chat = -1001271479322
+    chat = -1001159103924
     current_chat = event.chat_id
     try:
-        async for event in ultroid_bot.iter_messages(
+        async for event in petercordpanda_bot.iter_messages(
             chat, search=args, limit=1, filter=filtermus
         ):
-            await ultroid_bot.send_file(current_chat, event, caption=event.message)
+            await petercordpanda_bot.send_file(current_chat, event, caption=event.message)
         await okla.delete()
     except Exception:
         return await eor(event, "`Song not found.`")
