@@ -2,7 +2,7 @@
 # Ported for Ultroid Userbot
 
 """
-✘ Commands Available -
+💐 Commands Available -
 
 • `{i}shorturl <url>`
    Get the shorted form of given url.
@@ -14,7 +14,7 @@ import pyshorteners
 from . import *
 
 
-@ultroid_cmd(pattern="shorturl ?(.*)")
+@ilhammansiz_cmd(pattern="shorturl ?(.*)")
 async def vom(event):
     a = await eor(event, "`Processing...`")
     try:
