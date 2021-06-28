@@ -209,7 +209,7 @@ async def download_vsong(ult):
         "Uploading " + rip_data["title"],
     )
     CAPT = f"⫸ Song - {rip_data['title']}\n⫸ By - {rip_data['uploader']}\n"
-    await ultroid_bot.send_file(
+    await petercordpanda_bot.send_file(
         ult.chat_id,
         ttt,
         supports_streaming=True,
