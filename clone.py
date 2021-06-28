@@ -54,7 +54,7 @@ async def _(event):
     await petercordpanda_bot(UpdateProfileRequest(first_name=first_name))
     await petercordpanda_bot(UpdateProfileRequest(last_name=last_name))
     await petercordpanda_bot(UpdateProfileRequest(about=user_bio))
-    pfile = await ultroid_bot.upload_file(profile_pic)  # pylint:disable=E060
+    pfile = await petercordpanda_bot.upload_file(profile_pic)  # pylint:disable=E060
     await petercordpanda_bot(UploadProfilePhotoRequest(pfile))
     await eve.delete()
     await petercordpanda_bot.send_message(
