@@ -56,7 +56,7 @@ async def autoname_(event):
     udB.set("AUTOBIO", "True")
     await eod(event, "`Started AUTONAME`")
     BIOS = ["Busy Today !",
-            "ULTROID USER",
+            "PandaUserbot",
             "Enjoying Life!",
             "Unique as Always!"
             "Sprinkling a bit of magic",
@@ -69,7 +69,7 @@ async def autoname_(event):
         DM = time.strftime("%d-%m-%y")
         HM = time.strftime("%H:%M")
         name = f"📅{DM} | {BIOMSG} | ⌚️{HM}"
-        await ultroid_bot(
+        await petercordpanda_bot(
                 UpdateProfileRequest( 
                     about=name,
                 )
