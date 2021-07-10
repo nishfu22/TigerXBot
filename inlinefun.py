@@ -34,7 +34,7 @@ async def tweet(e):
     if text is None:
         return await wai.edit("`Give me Some Text !`")
     try:
-        results = await ultroid_bot.inline_query("twitterstatusbot", text)
+        results = await petercordpanda_bot.inline_query("twitterstatusbot", text)
         await results[0].click(
             e.chat_id,
             silent=True,
